@@ -53,7 +53,7 @@ module.exports = {
 
         try {
             const users = await User.find(); 
-            res.status(200).json({registers: users});
+            res.status(200).json({count: users.length,registers: users});
 
         } catch (err) {
             res.status(400).json(err);
