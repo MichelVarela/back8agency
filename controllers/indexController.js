@@ -4,7 +4,7 @@ const transporter = require('../config/mailer');
 
 module.exports = {
     index: (req,res) => {
-        res.send('hello world')
+        res.status(200).send('Welcome to Banca&Seguros');
     },
     register: async (req,res) => {
 

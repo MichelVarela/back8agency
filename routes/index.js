@@ -5,6 +5,6 @@ const {index, register, getAllregister} = require('../controllers/indexControlle
 
 router.get('/', index);
 router.post('/register', registerValidation, register);
-router.get('/register-confirmed', getAllregister);
+router.get('/registerConfirmed', getAllregister);
 
 module.exports = router;
