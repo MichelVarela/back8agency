@@ -4,7 +4,7 @@ const transporter = require('../config/mailer');
 
 module.exports = {
     index: (req,res) => {
-        res.status(200).json({welcome: 'Welcome to Banca&Seguros', data: 'https://backbys.herokuapp.com/registerConfirmed'});
+        res.status(200).json({welcome: 'Welcome to Banca&Seguros', data: `${process.env.PORT || "http://localhost:4000"}/registerConfirmed`});
     },
     register: async (req,res) => {
 
@@ -49,11 +49,11 @@ module.exports = {
         }
 
     },
-    getAllregister: async(req,res) => {
+    getAllregister: async (req,res) => {
 
         try {
             const users = await User.find(); 
-            res.status(200).json({count: users.length,registers: users});
+            res.status(200).json({count: users.length, registers: users});
 
         } catch (err) {
             res.status(400).json(err);
