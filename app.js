@@ -13,7 +13,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-app.use(cors('http://localhost:3000/'));
+app.use(cors('https://bancaseguros.herokuapp.com/'));
 
 // DB connection
 const uri = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@cluster0.gwrcf.mongodb.net/test`;
