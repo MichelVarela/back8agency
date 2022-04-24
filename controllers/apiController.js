@@ -38,8 +38,7 @@ module.exports = {
                     html: `<h2>Registro para Webinar</h2>
                         <br>
                         <p>Muchas gracias ${name}, te invitamos a este webinar, donde trataremos la temática de cómo humanizar la experiencia del cliente de Banca y Seguros en el nuevo entorno digital. </p><br>
-                        <img src='/images/logo.png'></img><br>
-                        Equipo de Banca&Seguros`
+                        <p>Equipo de Banca&Seguros</p>`
                 });
         
             } catch (err) {
@@ -52,7 +51,7 @@ module.exports = {
 
         try {
             const users = await User.find(); 
-            res.status(200).json({count: users.length, registers: users});
+            res.status(200).json({data: {count: users.length, registers: users}});
 
         } catch (err) {
             res.status(400).json(err);
