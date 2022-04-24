@@ -25,7 +25,7 @@ module.exports = {
     
                 const userDB = await user.save(); // guardamos el new User creado
     
-                //console.log('------ usuario creado ------');
+                console.log('------ usuario creado ------');
                 res.status(200).json({
                     error: null,
                     data: userDB
