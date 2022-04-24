@@ -4,7 +4,7 @@ const transporter = require('../config/mailer');
 
 module.exports = {
     index: (req,res) => {
-        res.status(200).json({welcome: 'Welcome to Banca&Seguros', data: `https://backbys.herokuapp.com//registerConfirmed`});
+        res.status(200).json({welcome: 'Welcome to Banca&Seguros', data: `https://backbys.herokuapp.com/registerConfirmed`});
     },
     register: async (req,res) => {
 
