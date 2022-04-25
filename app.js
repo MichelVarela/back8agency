@@ -14,7 +14,7 @@ const apiRouter = require('./routes/api');
 
 var app = express();
 
-app.use(cors('http://localhost:3000/'));
+app.use(cors('https://bancaseguros.herokuapp.com'));
 
 // DB connection
 const uri = process.env.MONGO_CNN;
